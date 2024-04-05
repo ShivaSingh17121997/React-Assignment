@@ -1,0 +1,108 @@
+.App {
+  text-align: center;
+}
+
+.List-page {
+  width: 400px;
+  text-align: left;
+  background-color: rgb(255, 210, 112);
+  padding: 20px;
+  border-radius: 5px;
+  margin: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: background-color 0.3s;
+  /* Smooth transition */
+  border: none;
+}
+
+.List-page:hover {
+  background-color: rgb(255, 184, 51);
+  /* Highlight color on hover */
+}
+
+.List-page h1 {
+  color: navy;
+  margin-bottom: 10px;
+}.container {
+  display: flex;
+  max-width: 100vw; /* Limit container's width to the viewport width */
+}
+
+.component1 {
+  flex: 0 0 30%;
+  background-color: #f0f0f0;
+  padding: 20px;
+  margin: auto;
+}
+
+
+.component2 {
+  flex: 0 0 65.2%;
+  background-color: #d9d9d9;
+  padding: 20px;
+  position: sticky;
+  top: 0;
+  height: 100vh;
+  overflow-y: auto;
+}
+
+
+/* grid card */
+.grid-card {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(3, auto);
+  gap: 10px;
+  border-radius: 10px;
+
+}
+
+.grid-card > div:nth-child(n + 10) {
+  display: none; 
+}
+.grid-card {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 10px; 
+  border-radius:10px ;
+}
+
+.grid-card div {
+  position: relative; 
+  
+}
+.grid-card div:hover img {
+  transform: scale(1.1); 
+}
+
+.grid-card div img {
+  width: 75%;
+  height: 70%;
+  transition: transform 0.3s ease; 
+
+}
+
+.grid-card div::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 75%;
+  height: 70%;
+  background-color: rgba(0, 0, 0, 0.5); 
+  opacity: 0; 
+  transition: opacity 0.3s ease; 
+}
+
+.grid-card div:hover::after {
+  opacity: 1; 
+}
+
+.grid-card div h2 {
+  position: absolute;
+  bottom: 10px;
+  left: 10px;
+  color: #fff; 
+  margin: 0;
+  font-size: 18px;
+}
